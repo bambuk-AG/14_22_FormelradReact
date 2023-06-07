@@ -17,12 +17,20 @@ export default function Formelrad() {
             <h2>Formelrad</h2>
             <img src={formelrad} width="200" alt="Formelrad"/>
             </header>
-            <form>
-                <InputField color={"black"} value={values.u} label="Spannung" handleChange={e => {setValues(values => ({...values, u: e.target.value}))}} />
-                <InputField color={"black"} value={values.i} label="Stromstärke" handleChange={e => {setValues(values => ({...values, i: e.target.value}))}} />
-                <InputField color={"black"} value={values.r} label="Widerstand" handleChange={e => {setValues(values => ({...values, r: e.target.value}))}} />
-                <button type="submit">Calculate</button>
-            </form>
+            <div>
+                <form>
+                    <div>
+                        <InputField color={"black"} value={values.u} label="Spannung" handleChange={e => {setValues(values => ({...values, u: e.target.value}))}} />
+                    </div>
+                    <div>
+                        <InputField color={"black"} value={values.i} label="Stromstärke" handleChange={e => {setValues(values => ({...values, i: e.target.value}))}} />
+                    </div>
+                    <div>    
+                        <InputField color={"black"} value={values.r} label="Widerstand" handleChange={e => {setValues(values => ({...values, r: e.target.value}))}} />
+                    </div>
+                    <button type="submit">Calculate</button>
+                </form>
+            </div>
         </section>
         </>
     )
